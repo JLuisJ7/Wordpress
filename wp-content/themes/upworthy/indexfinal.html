@@ -1,0 +1,121 @@
+<?php get_header(); ?>
+
+	<div id="upworthy-web-app-wrapper">
+
+	    <header id="primary-nav" class="wrapper">
+	      <div class="container">
+	        <div class="row">
+	          <div class="col-md-12">
+	            <div class="nav-container">
+	              	<nav>
+					  <!-- hamburger menu -->
+					  <button id="browse-button" type="button" class="analytic_event loaded">
+					    <svg class="icon navicon"><use xlink:href="#ico-navicon"></use></svg>
+					  </button>
+					  <!-- topics -->
+					</nav>
+
+	              	<!-- branding -->
+	              	<div id="branding">
+		                <a href="<?php echo get_option('home'); ?>" class="analytic_event" data-ga-category="General" data-ga-action="Header Logo" data-ga-label="pageTitle" id="logo"></a>
+		                <div class="tagline">
+		                  <span class="default">Things That Matter. Pass ‘Em On.</span>
+		                  <span class="climate">Upworthy supports Climate Summit 2014</span>
+		                </div>
+	              	</div>
+	              <!-- /branding -->
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </header>
+
+	    
+
+	    
+
+		<div class="wrapper">
+			<div class="container">
+
+				<!-- featured nuggets -->
+			 	<!-- featured nugget slideshow -->
+				<div id="featured-nuggets">				  
+					<div id="nugget" class="slide clickable analytic_event" data-href="" style="background-image: url('')" data-sponsor-slug="false">
+					  <div class="promoted-flag"></div>
+					  <div class="featured-flag hidden-sm hidden-md hidden-lg">Featured</div>
+					  <div class="nugget-info">
+					    <h2>
+					      <a href="">All She Wanted To Do Was Hold Her Girlfriend's Hand. She Soon Realized She Would Have To Leave.</a>
+					    </h2>
+					  </div>
+					</div><!-- /nugget -->				
+					
+					<div id="nugget" class="slide clickable analytic_event" data-href="" style="background-image: url('')" data-sponsor-slug="false">
+					  <div class="promoted-flag"></div>
+					  <div class="featured-flag hidden-sm hidden-md hidden-lg">Featured</div>
+					  <div class="nugget-info">
+					    <h2>
+					      <a href="">All She Wanted To Do Was Hold Her Girlfriend's Hand. She Soon Realized She Would Have To Leave.</a>
+					    </h2>
+					  </div>
+					</div><!-- /nugget -->
+					
+				</div>
+
+
+				<div class="homepage">
+					<!-- nugget grid -->
+					<div class="nugget-grid" id="page-content">
+						<?php
+						while (have_posts()) : the_post();
+						$fullimage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+						$urlfullimage = $fullimage['0'];
+						?>
+					      <div class="row">
+                <div class="col-md-12">                 
+                <div id="nugget" class="nugget clickable analytic_event " data-ga-category="General" data-ga-action="Nugget Grid" data-ga-label="" data-href="<?php the_permalink(); ?>" data-sponsor-slug="false">
+                    <a href="<?php the_permalink(); ?>" class="nugget-image" style="background-image:url(<?php echo $urlfullimage; ?>)"></a>
+                    <div class="nugget-info">
+                      <div class="avatar">
+                        <div class="promoted-flag"></div>
+                          <div class="top-spacer"></div>
+                          <img alt="Web 66 6223 1" src="">
+                      </div>
+                        <div class="title">
+                            <div class="category">
+                              <?php $cont=0; ?>
+                            <?php foreach((get_the_category()) as $category) {
+                              if ($cont<1) {
+                                echo $category->cat_name . ' ';
+                              }
+
+                              $cont=$cont+1;
+                            }
+                            ?>
+                            </div>
+                          <h3>
+                              <a href="<?php the_permalink(); ?>"></a><a data-ga-action="Nugget Grid" data-ga-category="General" data-ga-label="" data-href="" href="<?php the_permalink(); ?>" rel="analytic_event"><?php the_title(); ?></a>
+                          </h3>
+                          <div class="author">
+                            By <?php the_author(); ?> 
+                          </div>
+                        </div>
+                    </div>
+                </div><!-- /nugget -->
+              </div>
+              </div>
+					    <?php endwhile; ?> 
+					      
+					 	<div id="infscr-loading" style="display:;"><img alt="Loading..." src="<?php bloginfo('template_url'); ?>/images/assets/ajax-loader.gif">
+					 		<div>Loading more Upworthy content...</div>
+					    </div>
+					</div>
+				</div><!-- homepage-->
+
+				<nav class="pagination pagination-centered" style="display: none;">
+				  <ul>
+				    
+				    <li><a rel="next" href="/page/2">Next »</a></li>
+				  </ul>
+				</nav>
+<?php get_footer(); ?>

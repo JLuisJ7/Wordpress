@@ -1,0 +1,23 @@
+commit 8153b2bec675841e946038def8eccf9ebfb28593
+Author: JLuisJ7 <jluisjab7@gmail.com>
+Date:   Sun Feb 15 10:16:24 2015 -0500
+
+    reiniciando el Proyecto
+
+commit 52bcaaaa0732a0be38e5536645c88bbc4cb9ffbd
+Author: JLuisJ7 <jluisjab7@gmail.com>
+Date:   Sun Feb 15 10:08:03 2015 -0500
+
+    Inicio del Proyecto
+
+commit 67982bc4998efa6633ef2d67fae6ab7d219e15eb
+Author: TRESMEDIA <willy@tres.pe>
+Date:   Tue Jan 27 16:39:03 2015 -0500
+
+    archivo wp-config
+
+commit b0ab9a1164ddad8325e03cacf1adccdfb9bdf8e1
+Author: JLuisJ7 <jluisjab7@gmail.com>
+Date:   Tue Jan 27 16:17:53 2015 -0500
+
+    Initial commit
