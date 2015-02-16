@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" <?php language_attributes(); ?>> 
 <head>
@@ -73,8 +74,5 @@ $("#transcriptButton").click(function() {
 });
 
 });
-
   </script>
-
-<body class="home ">
-<?php include (TEMPLATEPATH . '/includes/icons.php'); ?>
+  <?php wp_head(); ?>
