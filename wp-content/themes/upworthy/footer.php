@@ -154,8 +154,8 @@ foreach($category_ids as $cat_id) {
 
 
   <!-- JavaScript Includes -->
-<script src="<?php bloginfo('template_url'); ?>/js/application.js"></script>
-  
+<script src="<?php bloginfo('template_url'); ?>/js/applicatio.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/app.js"></script>
 
   <!-- external analytics & services -->
 
